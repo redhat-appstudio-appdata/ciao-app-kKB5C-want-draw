@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: vendor-pipelines-vote-api-3tzf
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: vendor-pipelines-vote-api-3tzf
+    app.kubernetes.io/part-of: ciao-app
+  name: vendor-pipelines-vote-api-3tzf
+  namespace: rhn-gps-rspazzol-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: vendor-pipelines-vote-api-3tzf
+    weight: null
+status: {}
